@@ -40,12 +40,30 @@ public class Team {
     public void setName(String name) {
         this.name = name;
     }
-    
+
+    public double getMaximumBudget() {
+        return maximumBudget;
+    }
+
+
+    public void setMaximumBudget(double maximumBudget) {
+        this.maximumBudget = maximumBudget;
+    }
+
+
+    public List<Player> getPlayers() {
+        return players;
+    }
+
+
+    public void setPlayers(List<Player> players) {
+        this.players = players;
+    }
 
 
     @Override
     public String toString() {
-        return "Team [id=" + id + ", maximimBudget=" + maximumBudget + ", name=" + name + "]";
+        return "Team [id=" + id + ", maximumBudget=" + maximumBudget + ", name=" + name + ", players=" + players + "]";
     }
 
     
