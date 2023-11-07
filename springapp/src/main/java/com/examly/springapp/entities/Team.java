@@ -1,7 +1,10 @@
 package com.examly.springapp.entities;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Team {
@@ -10,13 +13,21 @@ public class Team {
     private String name;
     private double maximumBudget;
 
+    @OneToMany
+    List<Player> players;
+
     public Team() {
     }
-    public Team(long id, String name, double maximimBudget) {
+
+    
+    public Team(long id, String name, double maximumBudget, List<Player> players) {
         this.id = id;
         this.name = name;
-        this.maximumBudget = maximimBudget;
+        this.maximumBudget = maximumBudget;
+        this.players = players;
     }
+
+
     public long getId() {
         return id;
     }
@@ -29,12 +40,9 @@ public class Team {
     public void setName(String name) {
         this.name = name;
     }
-    public double getMaximimBudget() {
-        return maximumBudget;
-    }
-    public void setMaximimBudget(double maximimBudget) {
-        this.maximumBudget = maximimBudget;
-    }
+    
+
+
     @Override
     public String toString() {
         return "Team [id=" + id + ", maximimBudget=" + maximumBudget + ", name=" + name + "]";

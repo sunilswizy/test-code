@@ -5,6 +5,7 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 @Entity
@@ -18,14 +19,15 @@ public class Player {
     private boolean sold;
     private String email;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    List<Team> team;
+    @ManyToOne(cascade = CascadeType.ALL)
+    Team team;
 
     public Player() {
     }
     
+
     public Player(long id, String name, int age, String category, double biddingprice, boolean sold, String email,
-            List<Team> team) {
+            Team team) {
         this.id = id;
         this.name = name;
         this.age = age;
@@ -35,6 +37,7 @@ public class Player {
         this.email = email;
         this.team = team;
     }
+
 
     public long getId() {
         return id;
@@ -79,19 +82,24 @@ public class Player {
         this.email = email;
     }
     
-    public List<Team> getTeam() {
+    public Team getTeam() {
         return team;
     }
 
-    public void setTeam(List<Team> team) {
+
+    public void setTeam(Team team) {
         this.team = team;
     }
+
 
     @Override
     public String toString() {
         return "Player [age=" + age + ", biddingprice=" + biddingprice + ", category=" + category + ", email=" + email
                 + ", id=" + id + ", name=" + name + ", sold=" + sold + ", team=" + team + "]";
     }
+
+
+   
 
 
     
