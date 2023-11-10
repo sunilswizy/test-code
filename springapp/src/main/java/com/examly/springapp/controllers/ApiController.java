@@ -50,8 +50,9 @@ public class ApiController {
     }
 
     @GetMapping("/api/organizer/player-list")
-    public List<Player> allPlayers(@RequestParam long teamId){
-        return service.allPlayers(teamId);
+    public List<Player> allPlayers(/*@RequestParam long teamId*/)
+    {
+        return service.allPlayers(/*teamId*/);
     }
 
     @GetMapping("/api/organizer/unsold-players")

@@ -40,11 +40,11 @@ public class ApiService {
         return tr.findAll();
     }
 
-	public List<Player> allPlayers(long teamId) {
-        if(tr.existsById(teamId)){
-            return pr.findAll();
-        }
-		return null;
+	public List<Player> allPlayers(/*long teamId*/) {
+        // if(tr.existsById(teamId)){
+        //     return pr.findAll();
+        // }
+		return pr.findAll();
 	}
 
     public List<Player> unSoldPlayers() {
