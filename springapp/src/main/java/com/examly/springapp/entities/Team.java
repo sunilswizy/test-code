@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 @Entity
 public class Team {
     @Id
@@ -13,7 +15,8 @@ public class Team {
     private String name;
     private double maximumBudget;
 
-    @OneToMany
+    @JsonManagedReference
+    @OneToMany(mappedBy="team")
     List<Player> players;
 
     public Team() {

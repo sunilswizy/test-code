@@ -3,7 +3,10 @@ package com.examly.springapp.entities;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 @Entity
 public class Player {
@@ -15,8 +18,10 @@ public class Player {
     private double biddingprice;
     private boolean sold;
     private String email;
-
+    
+    @JsonBackReference
     @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="teamid")
     Team team;
 
     public Player() {
