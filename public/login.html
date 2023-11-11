@@ -1,9 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Login Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
 </head>
 <body>
-
+  <form id="loginForm">
+    <label for="username"><b>Username:</b></label>
+    <br>
+    <input type="text" id="username" required><br>
+ 
+    <label for="password"><b>Password:</b></label>
+    <br>
+    <input type="password" id="password" required><br>
+ 
+    <input type="submit" id="LoginButton" value="Login">
+    <style>
+        #LoginButton{
+background-color: blue;
+color:white;
+padding: 16px 20px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 100%;
+opacity: 0.9;
+}
+ 
+    </style>
+  </form>
+ 
+  <div id="passwordValidation"></div>
+ 
+  <script src="loginValidation.js"></script>
 </body>
 </html>

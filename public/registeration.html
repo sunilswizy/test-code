@@ -2,8 +2,45 @@
 <html>
 <head>
     <title>Registration Page</title>
+    <h1>Registration</h1>
 </head>
 <body>
-
+    <form id="registrationForm">
+        <label for="username"><b>Username:</b></label>
+        <br>
+        <input type="text" id="username" required><br>
+   
+        <label for="password"><b>Password:</b></label>
+        <br>
+        <input type="password" id="password" required><br>
+   
+        <label for="confirmPassword"><b>Confirm Password:</b></label>
+        <br>
+        <input type="password" id="confirmPassword" required><br>
+   
+        <label for="role"><b>Role:</b></label>
+        <br>
+        <input type="text" id="role" required><br>
+   
+        <input type="submit" id="RegisterButton" value="Register">
+        <!-- <button (onclick) type="button" class="button">Register</button> -->
+        <style>
+            #RegisterButton{
+    background-color: blue;
+    color:white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+ 
+        </style>
+ 
+      </form>
+   
+      <script src="registrationValidation.js"></script>
+ 
 </body>
 </html>
