@@ -30,8 +30,8 @@ public class ApiController {
     }
 
     @PostMapping("/api/admin/teams")
-    public void addTeam(@RequestBody Team team){
-        service.addTeam(team);
+    public boolean addTeam(@RequestBody Team team){
+        return service.addTeam(team);
     }
 
     @GetMapping("/api/admin/teams")
@@ -40,8 +40,8 @@ public class ApiController {
     }
 
     @PostMapping("/api/admin/players")
-    public void addPlayer(@RequestBody Player player){
-        service.addPlayer(player);
+    public boolean addPlayer(@RequestBody Player player){
+        return service.addPlayer(player);
     }
 
     @GetMapping("/api/admin/players")

@@ -20,16 +20,24 @@ public class ApiService {
     @Autowired
     TeamRepository tr;
 
-    public void addTeam(Team team) {
-        tr.save(team);
+    public boolean addTeam(Team team) {
+        if(team!=null){
+            tr.save(team);
+            return true;
+        }
+        return false;
     }
 
 	public List<Team> getAllTeams() {
 		return tr.findAll();
 	}
 
-    public void addPlayer(Player player) {
-        pr.save(player);
+    public boolean addPlayer(Player player) {
+        if(player!=null){
+            pr.save(player);
+            return true;
+        }
+        return false;
     }
 
     public List<Player> getAllPlayers() {
