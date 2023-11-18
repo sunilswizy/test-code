@@ -6,8 +6,8 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
  
     // Simulate login validation
     // if (username === "example" && password === "password")
-    const validUser="10731691";
-    const validPass="mukul@07";
+    const validUser="10731089";
+    const validPass="proj@123";
     if (username === validUser && password === validPass)
     {
       alert("Login successful! Role: admin");
