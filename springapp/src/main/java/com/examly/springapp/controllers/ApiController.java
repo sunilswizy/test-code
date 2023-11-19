@@ -19,10 +19,10 @@ public class ApiController {
     @Autowired
     ApiService service;
     
-    @GetMapping("/welcome")
-    public String welcome(){
-        return "Welcome to SpringProject";
-    }
+    // @GetMapping("/api/admin/welcome")
+    // public String welcome(){
+    //     return "Welcome to SpringProject";
+    // }
 
     @GetMapping("/team/getAllList")
     public List<Team> getAll(){
