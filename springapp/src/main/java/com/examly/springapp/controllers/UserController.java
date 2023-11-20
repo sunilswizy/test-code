@@ -14,7 +14,7 @@ import com.examly.springapp.services.UserService;
 
 
 @RestController
-@RequestMapping("/api")
+//@RequestMapping("/api")
 @CrossOrigin(origins = "http://localhost:8080")
 public class UserController {
 
@@ -30,7 +30,7 @@ public class UserController {
 	}
 	
 	
-	@PostMapping("/auth/login")
+	@PostMapping("/login")
 	public ResponseEntity<User> loginUser(@RequestBody User loginUser) {
 		// Hardcoded user credentials for demonstration purposes
 		User admin = new User(1L, "admin", "admin123", "ADMIN");
