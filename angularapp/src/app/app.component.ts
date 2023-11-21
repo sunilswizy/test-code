@@ -6,5 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angularapp';
+    title = 'angularapp';
+    isUserLoggedIn = false;
+  
+    constructor(private authService: AuthService) {}
+  
+     ngOnInit() {
+        let storeData = localStorage.getItem("isUserLoggedIn");
+        console.log("StoreData: " + storeData);
+  
+        if( storeData != null && storeData == "true")
+           this.isUserLoggedIn = true;
+        else
+  
+  
+           this.isUserLoggedIn = false;
+     }
 }
