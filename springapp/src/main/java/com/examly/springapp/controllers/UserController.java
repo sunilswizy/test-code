@@ -14,8 +14,8 @@ import com.examly.springapp.services.UserService;
 
 
 @RestController
-//@RequestMapping("/api")
-@CrossOrigin(origins = "http://localhost:8080")
+@RequestMapping("/api")
+@CrossOrigin(origins = "https://8081-aefaacacebcdffddecbadfcfbdfaaabadc.premiumproject.examly.io")
 public class UserController {
 
 	@Autowired
@@ -30,7 +30,7 @@ public class UserController {
 	}
 	
 	
-	@PostMapping("/login")
+	@PostMapping("/auth/login")
 	public ResponseEntity<User> loginUser(@RequestBody User loginUser) {
 		// Hardcoded user credentials for demonstration purposes
 		User admin = new User(1L, "admin", "admin123", "ADMIN");

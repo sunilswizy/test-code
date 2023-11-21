@@ -1,8 +1,7 @@
 package com.examly.springapp.configurations;
 
 public class AuthenticationBean {
-
-	 private String message;
+    private String message;
 
 	    public AuthenticationBean(String message) {
 	        this.message = message;
@@ -20,5 +19,4 @@ public class AuthenticationBean {
 	    public String toString() {
 	        return String.format("HelloWorldBean [message=%s]", message);
 	    }
-
 }

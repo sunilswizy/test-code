@@ -1,11 +1,9 @@
 package com.examly.springapp.repositories;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-
 import com.examly.springapp.entities.User;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-@Repository
-public interface UserRepository extends JpaRepository<User, Long> {
-	public User findByUsername(String username);  
+public interface UserRepository extends JpaRepository<User,Integer>{
+
+    User findByUsername(String username);
+
 }

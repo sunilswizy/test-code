@@ -1,5 +1,4 @@
 package com.examly.springapp.configurations;
-
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
@@ -11,10 +10,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import com.examly.springapp.entities.User;
 
-
-public class UserPrinciple implements UserDetails {
-
-	private String username;
+public class UserPrinciple implements UserDetails{
+    private String username;
 	private String password;
 	private List<GrantedAuthority> authorities;
 
@@ -34,6 +31,7 @@ public class UserPrinciple implements UserDetails {
 	@Override
 	public String getPassword() {
 		// TODO Auto-generated method stub
+        System.out.println(password);
 		return password;
 	}
 
@@ -61,10 +59,9 @@ public class UserPrinciple implements UserDetails {
 		return true;
 	}
 
-	@Override
+    @Override
 	public boolean isEnabled() {
 		// TODO Auto-generated method stub
 		return true;
 	}
-
 }
