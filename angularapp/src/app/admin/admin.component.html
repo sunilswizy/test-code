@@ -1,1 +1,8 @@
-<p>admin works!</p>
+<app-navbar></app-navbar>
+<h3>Admin Panel</h3>
+<app-player></app-player>
+<app-team></app-team>
+
+<button (click)="getTeams()">get tems</button>
+
+<span>{{ output|json }}</span>
