@@ -1,7 +1,7 @@
 package com.examly.springapp.controllers;
 
 import java.util.List;
-
+import org.springframework.web.bind.annotation.CrossOrigin;
 import com.examly.springapp.entities.Player;
 import com.examly.springapp.entities.Team;
 import com.examly.springapp.services.ApiService;
@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@CrossOrigin(origins = "https://8081-dcedfdcbcfcffddecbadfcfbdfaaabadc.premiumproject.examly.io")
 public class ApiController {
 
     @Autowired
