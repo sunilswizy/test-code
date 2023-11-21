@@ -1,1 +1,33 @@
-<p>team works!</p>
+<h6>Create New Team</h6>
+<div class="container">
+  <form #teaminput="ngForm" (ngSubmit)="maxbud(teaminput)">
+    <div class="form-group">
+      <label for="tname" id="tname">Team Name:</label>
+        <input type="text" class="form-control" id="tname" name="tname" ngModel #tname="ngModel">
+    </div>
+    <div class="form-group">
+      <label for="maximumBudget" id="maxbudget">Maximum Budget:</label>
+        <input type="text" class="form-control"  name="maximumBudget" ngModel #maximumBudget="ngModel">
+        <!-- <input type="number" value="2000" id="maximumBudget"> -->
+      </div>
+      <div id="status">MaximumBudget Status: {{maximumbudgetstatus}}</div>
+      <button class="btn btn-primary" type="submit">Create</button>
+  </form>
+</div>
+<div>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Maximum Budget</th>
+    </tr>
+    <tr *ngFor="let item of teams" id="list">
+      <td>{{item.name}} (Budget: {{item.maximumBudget}})</td>
+      <ul><li id="edit"><button>Edit</button><button id="pdelete" type="submit">Delete</button></li></ul>
+    </tr>
+  </table>
+  </div>
+
+
+
+
+
