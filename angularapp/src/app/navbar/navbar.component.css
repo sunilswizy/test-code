@@ -1,0 +1,19 @@
+.navcontainer{
+    display:flex;
+    justify-content: space-between;
+    background-color: blue;
+    color:white;
+  }
+  li{
+    display: inline-block;
+    margin-left: 2rem;
+    color:white;
+    font-weight:bolder;
+  }
+  
+  a{
+    color:white;
+    text-decoration:none;
+  }
+  
+  

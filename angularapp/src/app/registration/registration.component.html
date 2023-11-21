@@ -1,1 +1,53 @@
-<p>registration works!</p>
+<app-navbar></app-navbar>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Page</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="registrationValidation.js"></script>
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h3>Registration</h3>
+        <form id="registrationForm" (ngSubmit)="validateRegistration()">
+
+            <div class="form-group">
+                <label>Username</label>
+                <input class="form-control" type="text" id="username" name="username" required>
+            </div>
+
+            <div class="form-group">
+                <label>Password</label>
+                <input class="form-control" type="password" id="password" name="password" required>
+                <span class="alert alert-danger" id="passwordValidation" class="validation-message" hidden></span>
+            </div>
+
+            <div class="form-group">
+                <label>Confirm password</label>
+                <input class="form-control" type="password" id="confirmPassword" name="confirmPassword" required>
+                <span class="alert alert-danger" id="passwordValidation1" class="validation-message" hidden></span>
+            </div>
+
+            <div>
+                <label for="role">Role:</label>
+                <select class="form-control" id="role" name="role" required>
+                    <option value="" disabled selected>Select role</option>
+                    <option value="ADMIN">Admin</option>
+                    <option value="ORGANIZER">Organizer</option>
+                </select>
+            </div>
+
+            <input type="submit" value="Register">
+        </form>
+    </div>
+
+
+</body>
+</html>

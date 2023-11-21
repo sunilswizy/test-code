@@ -1,1 +1,45 @@
-<p>player works!</p>
+<p style="font-weight:bolder;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Create New Player</p>
+
+<div class="container">
+  <form #input="ngForm" (ngSubmit)="bidding(input.value)">
+    <div class="form-group">
+      <label for="pname">Player Name: </label>
+        <input type="text" class="form-control" name="pname" id="pname" ngModel #pname="ngModel">
+    </div>
+    <div class="form-group">
+      <label for="page">Player Age: </label>
+        <input type="text" class="form-control" name="page" id="page" ngModel #page="ngModel">
+    </div>
+    <div class="form-group">
+      <label for="pcategory">Player Category: </label>
+        <input type="text" class="form-control" name="pcategory" id="pcategory" ngModel #pcategory="ngModel">
+    </div>
+    <div class="form-group">
+      <label for="biddingprice">Bidding Price: </label>
+        <input type="text" class="form-control" name="biddingprice" id="biddingprice" ngModel #biddingprice="ngModel">
+    </div>
+    <br>
+    <div id="status">Bidding Price Status: {{biddingpricestatus}}</div>
+    <!-- <input type="number" value="200" id="playerBiddingPrice"> -->
+    <br>
+    <button class="btn btn-primary" type="submit">Create</button>
+  </form>
+</div>
+
+<div>
+  <table>
+    <tr>
+      <th>Player information</th>
+      <th>Action</th>
+    </tr>
+    <tr *ngFor="let player of players" id="list">
+      <td>{{player.name}} (Age: {{player.age}} Category: {{player.category}} Bidding Price: {{player.biddingPrice}})</td>
+<td><ul>
+  <li id="edit"><button id=1>Edit</button><button id=2>Delete</button></li>
+</ul>
+</td>
+    </tr>
+  </table>
+</div>
+
+<div><button (click)="getPlayers()">Get Players</button></div>
