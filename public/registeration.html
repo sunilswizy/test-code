@@ -2,45 +2,51 @@
 <html>
 <head>
     <title>Registration Page</title>
-    <h1>Registration</h1>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="registrationValidation.js"></script>
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
 </head>
 <body>
-    <form id="registrationForm">
-        <label for="username"><b>Username:</b></label>
-        <br>
-        <input type="text" id="username" required><br>
-   
-        <label for="password"><b>Password:</b></label>
-        <br>
-        <input type="password" id="password" required><br>
-   
-        <label for="confirmPassword"><b>Confirm Password:</b></label>
-        <br>
-        <input type="password" id="confirmPassword" required><br>
-   
-        <label for="role"><b>Role:</b></label>
-        <br>
-        <input type="text" id="role" required><br>
-   
-        <input type="submit" id="RegisterButton" value="Register">
-        <!-- <button (onclick) type="button" class="button">Register</button> -->
-        <style>
-            .button{
-    background-color: blue;
-    color:white;
-    padding: 16px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    opacity: 0.9;
-}
- 
-        </style>
- 
-      </form>
-   
-      <script src="registrationValidation.js"></script>
- 
+    <div class="container">
+        <h1>Registration</h1>
+        <form action="/login.html" id="registrationForm" onsubmit=" return validateRegistration();" method="get">
+            
+            <div class="form-group">
+                <label>Username</label>
+                <input class="form-control" type="text" id="username" name="username" required>
+            </div>
+
+            <div class="form-group">
+                <label>Password</label>
+                <input class="form-control" type="password" id="password" name="password" required>
+                <span class="alert alert-danger" id="passwordValidation" class="validation-message" hidden></span>
+            </div>
+
+            <div class="form-group">
+                <label>Confirm password</label>
+                <input class="form-control" type="password" id="confirmPassword" name="confirmPassword" required>
+                <span class="alert alert-danger" id="passwordValidation1" class="validation-message" hidden></span>    
+            </div>
+
+            <div>
+                <label for="role">Role:</label>
+                <select class="form-control" id="role" name="role" required>
+                    <option value="" disabled selected>Select role</option>
+                    <option value="admin">Admin</option>
+                    <option value="organizer">Organizer</option>
+                </select>
+            </div>
+
+            <input type="submit" value="Register">
+        </form>
+    </div>
+
+    
 </body>
 </html>
