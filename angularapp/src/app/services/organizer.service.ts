@@ -13,11 +13,11 @@ export class OrganizerService {
     headers: new HttpHeaders ({
       'Content-Type':  'application/json',
       'Authorization': 'Basic ' + btoa('admin:admin123'),
-      'Access-Control-Allow-Origin': 'https://8081-aefaacacebcdffddecbadfcfbdfaaabadc.premiumproject.examly.io'
+      'Access-Control-Allow-Origin': 'https://8081-dcedfdcbcfcffddecbadfcfbdfaaabadc.premiumproject.examly.io'
     })
   };
 
-  baseUrl:string="https://8080-aefaacacebcdffddecbadfcfbdfaaabadc.premiumproject.examly.io";
+  baseUrl:string="https://8080-dcedfdcbcfcffddecbadfcfbdfaaabadc.premiumproject.examly.io";
 
 public getUnsoldPlayers():Observable<Object>{
   return this.httpClient.get(this.baseUrl+"/api/organizer/unsold-players").pipe();
